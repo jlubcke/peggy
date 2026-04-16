@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peggy - Pärlmönster</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Peggy<span>.</span></h1>
+            <p>Från bild till pärlplatta</p>
+        </header>
+
+        <section class="controls">
+            <div class="control-group">
+                <label for="imageLoader">Välj en bild</label>
+                <input type="file" id="imageLoader" accept="image/*">
+            </div>
+            <div class="control-group">
+                <label for="pixelSize">Pärlstorlek: <span id="sizeVal">10</span>px</label>
+                <input type="range" id="pixelSize" min="2" max="50" value="10">
+            </div>
+        </section>
+
+        <main class="workspace">
+            <div class="view-card">
+                <h3>Original</h3>
+                <div class="canvas-wrapper">
+                    <img id="sourceImage" alt="Din bild kommer synas här">
+                </div>
+            </div>
+
+            <div class="view-card">
+                <h3>Pärlmönster (B/W)</h3>
+                <div class="canvas-wrapper">
+                    <canvas id="pixelCanvas"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
